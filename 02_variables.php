@@ -35,10 +35,14 @@ $cash_on_hand = 405.23;
 // echo 5 + 5; //same
 // echo '5' + '5'; //same
 $x = '5' + '5';
-var_dump($x);
-echo 10 - 5;
-echo 5*3;
-echo 10/2;
-echo 10%1;
+// var_dump($x);
+// echo 10 - 5;
+// echo 5*3;
+// echo 10/2;
+// echo 10%1;
 
+// define == const
+// define('HOST', 'localhost');
+define('DB_NAME', 'dev_db');
+echo DB_NAME;
 
