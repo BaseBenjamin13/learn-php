@@ -1,26 +1,10 @@
 <?php include 'inc/header.php'; ?>
 
 <?php
-$feedback = [
-    [
-        'id' => '1',
-        'name' => 'name',
-        'email' => 'asegfaseg@aslgf',
-        'body' => 'as;loiheg;oasiegp;oiasneg;ase'
-    ],
-    [
-        'id' => '1',
-        'name' => 'name',
-        'email' => 'asegfaseg@aslgf',
-        'body' => 'as;loiheg;oasiegp;oiasneg;asesefs sfesef  al;soiefh ajs;aoefijas;e sja;ojf'
-    ],
-    [
-        'id' => '1',
-        'name' => 'name',
-        'email' => 'asegfaseg@aslgf',
-        'body' => 'as;loiheg;oasie g;ase'
-    ]
-]
+$sql = 'SELECT * FROM feedback';
+$result = mysqli_query($conn, $sql);
+$feedback = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
 ?>
 
 <h2>Feedback</h2>
@@ -33,7 +17,7 @@ $feedback = [
         <div class="card-body text-center">
             <?php echo $item['body']; ?>
             <div class="text-secondary mt-2">
-                By <?php echo $item['name']; ?>
+                By <?php echo $item['name'] . ' on ' . $item['date']; ?> 
             </div>
         </div>
     </div>
